@@ -35,7 +35,7 @@ namespace browserstack_camera_injection_ios_csharp
             caps.AddAdditionalCapability("name", "sample_test");
 
             //Set media url
-            caps.AddAdditionalCapability("browserstack.uploadMedia", new[] { "media://<media_url>" });
+            caps.AddAdditionalCapability("browserstack.uploadMedia", new[] { "media://c190a75dc86cd8d1d84d2c4f5c690164faaeed31" });
             
             //Set camera injection capability
             caps.AddAdditionalCapability("browserstack.enableCameraImageInjection", "true");
@@ -45,7 +45,7 @@ namespace browserstack_camera_injection_ios_csharp
             IOSDriver<IOSElement> driver = new IOSDriver<IOSElement>(new Uri("http://hub-cloud.browserstack.com/wd/hub"), caps);
             
             // JSE for camera injection with media url 
-            driver.ExecuteScript("browserstack_executor: {\"action\": \"cameraImageInjection\", \"arguments\": {\"imageUrl\": \"media://<media_url>\"}}");
+            driver.ExecuteScript("browserstack_executor: {\"action\": \"cameraImageInjection\", \"arguments\": {\"imageUrl\": \"media://c190a75dc86cd8d1d84d2c4f5c690164faaeed31\"}}");
 
             
 

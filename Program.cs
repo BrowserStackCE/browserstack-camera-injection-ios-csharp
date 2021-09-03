@@ -31,7 +31,7 @@ namespace browserstack_camera_injection_ios_csharp
 
             // Set other BrowserStack capabilities
             caps.AddAdditionalCapability("project", "Camera Injection BrowserStack");
-            caps.AddAdditionalCapability("build", "CSharp iOS Camera Injection");
+            caps.AddAdditionalCapability("build", Environment.GetEnvironmentVariable("BROWSERSTACK_BUILD_NAME"));
             caps.AddAdditionalCapability("name", "sample_test");
 
             //Set media url

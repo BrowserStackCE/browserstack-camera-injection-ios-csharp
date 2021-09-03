@@ -20,7 +20,7 @@ namespace browserstack_camera_injection_ios_csharp
             caps.AddAdditionalCapability("browserstack.key", Environment.GetEnvironmentVariable("BROWSERSTACK_ACCESS_KEY"));
 
             // Set URL of the application under test
-            caps.AddAdditionalCapability("app", "bs://<app_url>");
+            caps.AddAdditionalCapability("app", Environment.GetEnvironmentVariable("BROWSERSTACK_APP_ID"));
 
             // Specify device and os_version
             caps.AddAdditionalCapability("device", "iPhone 11");
